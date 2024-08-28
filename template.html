@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{{ picture.title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .media-container {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ picture.title }}</h1>
+
+    <div class="media-container">
+        <h2>Image</h2>
+        <img src="{{ picture.image.url }}" alt="{{ picture.title }}" style="max-width: 100%; height: auto;" />
+    </div>
+
+    <div class="media-container">
+        <h2>Video</h2>
+        <video controls autoplay style="max-width: 100%; height: auto;">
+            <source src="{{ video.video_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</body>
+</html>
